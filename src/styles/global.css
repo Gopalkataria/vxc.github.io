@@ -167,7 +167,7 @@
         "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --font-serif:
         "Verdana", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-    --color-zag-dark: var(--color-neutral-950);
+    --color-zag-dark: #353e43;
     /* --color-zag-dark: var(--color-neutral-700); */
     --color-zag-light: var(--color-neutral-100);
     --color-zag-dark-muted: var(--color-neutral-600);
