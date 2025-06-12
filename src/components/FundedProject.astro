@@ -1,0 +1,94 @@
+---
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+export type Props = {
+    id: string;
+    title: string;
+    role?: string;
+    period: string;
+    sponsor: string;
+    partners?: string;
+    budget: string;
+    notes?: string;
+    website?: string;
+};
+
+const project = Astro.props;
+---
+
+<Card key={project.id} className="overflow-hidden border-l-4 border-l-primary">
+    <CardHeader className="bg-muted/30 pb-2">
+        <div class="flex items-start justify-between">
+            <CardTitle className="text-xl font-semibold"
+                >{project.title}</CardTitle
+            >
+            {
+                project.role && (
+                    <Badge
+                        variant={
+                            project.role === "PI" ? "default" : "secondary"
+                        }
+                        className="ml-2"
+                    >
+                        {project.role}
+                    </Badge>
+                )
+            }
+        </div>
+        <div class="text-sm text-muted-foreground">{project.period}</div>
+    </CardHeader>
+    <CardContent className="pt-4">
+        <div class="grid gap-3 text-sm">
+            <div>
+                <span class="font-medium">Sponsor:</span>
+                {project.sponsor}
+            </div>
+            {
+                project.partners && (
+                    <div>
+                        <span class="font-medium">
+                            Consortium Partners:
+                        </span>{" "}
+                        {project.partners}
+                    </div>
+                )
+            }
+            <div>
+                <span class="font-medium">Budget:</span>{" "}
+                <span class="font-semibold text-primary"
+                    >{project.budget}</span
+                >
+            </div>
+            {
+                project.notes && (
+                    <div>
+                        <span class="font-medium">Notes:</span>{" "}
+                        {project.notes}
+                    </div>
+                )
+            }
+            {
+                project.website && (
+                    <div>
+                        <span class="font-medium">Website:</span>{" "}
+                        <a
+                            href={project.website}
+                            class="text-blue-600 hover:underline"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                        >
+                            {project.website}
+                        </a>
+                    </div>
+                )
+            }
+        </div>
+    </CardContent>
+</Card>
