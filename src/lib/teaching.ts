@@ -81,7 +81,7 @@ export const courseData = [
     year: 2024,
     courses: [
       {
-        title: "Principles of Programming",
+        title: "Principles of Programming Languages",
         season: "Summer",
         institution: "eMasters",
         type: "programming",
