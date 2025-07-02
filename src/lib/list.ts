@@ -1,5 +1,5 @@
 import type { ArticleFrontmatter, ProjectFrontmatter } from "./types";
-import { getShortDescription, processContentInDir } from "./utils";
+import { getShortDescription, processContentInDir } from "./orgfileutils";
 
 export const articles = (
   await processContentInDir<ArticleFrontmatter, ArticleFrontmatter>(
@@ -24,7 +24,6 @@ export const articles = (
   const dateB = new Date(b.timestamp);
   return dateB.getTime() - dateA.getTime();
 });
-
 
 export const researchInterests = (
   await processContentInDir<ArticleFrontmatter, ArticleFrontmatter>(
