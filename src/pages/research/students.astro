@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { GLOBAL } from "../../lib/variables";
+import { renderOrgToHtml } from "../../lib/orgfileutils";
+
+const studentsHtml = await renderOrgToHtml(
+    "orgfiles/research/students/index.org",
+);
+---
+
+<Layout>
+    <Fragment slot="head">
+        <title>{GLOBAL.username} • Research Students</title>
+        <meta
+            name="description"
+            content="Research students of {GLOBAL.username}"
+        />
+    </Fragment>
+
+    <section class="prose lg:prose-xl max-w-none">
+        <h1>Research Students</h1>
+        <div set:html={studentsHtml} />
+    </section>
+</Layout>
