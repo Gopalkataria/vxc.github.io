@@ -1,0 +1,102 @@
+---
+// Imports
+import { researchInterests } from "../../lib/list";
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/common/Section.astro";
+import { GLOBAL } from "../../lib/variables";
+import { orgtohtml } from "../../lib/orgtohtml";
+import { existsSync } from "fs";
+import { resolve } from "path";
+import { fileURLToPath } from "url";
+
+// Only export allowed in Astro component frontmatter
+export async function getStaticPaths() {
+    if (!researchInterests || !Array.isArray(researchInterests)) {
+        console.error("Invalid research data");
+        return [];
+    }
+
+    return researchInterests
+        .map((research) => {
+            if (!research.filename) {
+                console.warn("research missing filename:", research);
+                return null;
+            }
+
+            const orgFilePath = resolve(
+                fileURLToPath(new URL("../../", import.meta.url)),
+                `orgfiles/research/${research.filename}.org`, // research.filename already includes "/research/"
+            );
+
+            if (!existsSync(orgFilePath)) {
+                console.warn(`Org file not found: ${orgFilePath}`);
+            }
+
+            return {
+                params: { slug: research.filename },
+                props: { research, orgFilePath },
+            };
+        })
+        .filter(Boolean);
+}
+
+// Component props - no export needed
+const { research, orgFilePath } = Astro.props;
+const { slug } = Astro.params;
+
+// Content generation
+let researchContent = "";
+console.log("Looking for org file at:", orgFilePath);
+if (existsSync(orgFilePath)) {
+    try {
+        researchContent = await orgtohtml(orgFilePath);
+        console.log(researchContent);
+    } catch (error) {
+        console.error(`Error parsing org file:`, error);
+        researchContent = `<div class="error">Error loading content</div>`;
+    }
+} else {
+    console.log("fuckck");
+}
+---
+
+<Layout>
+    <Fragment slot="head">
+        <title>{GLOBAL.username} • Research Students</title>
+        <meta
+            name="description"
+            content={`Research students and mentorship by ${GLOBAL.username}`}
+        />
+        <meta
+            property="og:title"
+            content={`${GLOBAL.username} • Research Students`}
+        />
+        <meta
+            property="og:description"
+            content={`Research students and mentorship by ${GLOBAL.username}`}
+        />
+        <meta property="og:image" content={`${GLOBAL.rootUrl}/vxc.png`} />
+        <meta
+            property="og:url"
+            content={`${GLOBAL.rootUrl}/research/students`}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content={`${GLOBAL.username} • Research Students`}
+        />
+        <meta
+            name="twitter:description"
+            content={`Research students and mentorship by ${GLOBAL.username}`}
+        />
+        <meta name="twitter:image" content={`${GLOBAL.rootUrl}/vxc.png`} />
+        <meta http-equiv="content-language" content="en" />
+        <meta name="language" content="English" />
+        <link rel="canonical" href={`${GLOBAL.rootUrl}/research/students`} />
+    </Fragment>
+    <Section class="my-16">
+        <div class="prose lg:prose-xl max-w-none">
+            <div set:html={researchContent} />
+        </div>
+    </Section>
+</Layout>

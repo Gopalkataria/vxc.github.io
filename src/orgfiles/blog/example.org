@@ -1,0 +1,31 @@
+#+TITLE: example
+#+DESCRIPTION: example blog.
+#+LAYOUT: ../../layouts/ProjectLayout.astro
+#+TAGS: Computing Education, Educational Technology, Systems Development
+#+IMAGEURL: /images/mergesort.png
+#+LIVEURL: http://algodynamics.io/mergesort/
+#+TIMESTAMP: 2025-02-26T02:39:03+00:00
+#+FEATURED: false
+#+FILENAME: example
+
+* example
+
+** Project Overview
+
+** this is an example blog
+
+[[google.com]]
+
+* Heading test
+
+** Heading test
+
+*** Heading test
+
+**** Heading test
+
+***** Heading test
+
+small list
+- example 1
+- example2

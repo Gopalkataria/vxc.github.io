@@ -15,7 +15,7 @@ export const articles = (
         time: data.frontmatter.time,
         featured: data.frontmatter.featured,
         timestamp: data.frontmatter.timestamp,
-        filename: `/blog/${data.frontmatter.filename}`,
+        filename: data.frontmatter.filename,
       };
     },
   )
@@ -39,7 +39,7 @@ export const researchInterests = (
         time: data.frontmatter.time,
         featured: data.frontmatter.featured,
         timestamp: data.frontmatter.timestamp,
-        filename: `/research/${data.frontmatter.filename}`,
+        filename: data.frontmatter.filename,
       };
     },
   )

@@ -8,92 +8,97 @@ import { Button } from "@/components/ui/button";
 ---
 
 <Layout>
-  <Fragment slot="head">
-    <title>{GLOBAL.username} • Research</title>
-    <meta
-      name="description"
-      content={`A collection of research instrests, papers, projrcts by {GLOBAL.username}.`}
-    />
-    <meta
-      property="og:title"
-      content={`${GLOBAL.blogTitle} • ${GLOBAL.username}`}
-    />
-    <meta property="og:description" content={GLOBAL.blogShortDescription} />
-    <meta
-      property="og:image"
-      content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`}
-    />
-    <meta property="og:url" content={`${GLOBAL.rootUrl}/blog`} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content={`${GLOBAL.blogTitle} • ${GLOBAL.username}`}
-    />
-    <meta name="twitter:description" content={GLOBAL.blogShortDescription} />
-    <meta
-      name="twitter:image"
-      content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`}
-    />
-    <meta http-equiv="content-language" content="en" />
-    <meta name="language" content="English" />
-    <link rel="canonical" href={`${GLOBAL.rootUrl}/blog`} />
-  </Fragment>
-  <Section>
-    <div class="flex items-center gap-4">
-      <h1 class="font-display text-3xl sm:text-4xl leading-loose">
-        Research Interests
-      </h1>
-    </div>
-    {/* Research Intrests summary */}
-    <p class="mb-4">
-      My current interests are in software architecture, computer science
-      education and educational technology.
-    </p>
-    <ul>
-      {
-        researchInterests.map((research_interest) => (
-          <li>
-            <ArticleSnippet
-              title={research_interest.title}
-              description={research_interest.description}
-              duration={`${research_interest.time} min`}
-              url={research_interest.filename}
-              timestamp={research_interest.timestamp}
-            />
-          </li>
-        ))
-      }
-    </ul>
-  </Section>
-  {/* Funded Projects */}
-  <Section class="my-4">
-    <div class="flex items-center gap-4">
-      <h1 class="font-display text-3xl sm:text-4xl leading-loose">
-        Funded Projects
-      </h1>
-    </div>
-    {/* Funded Projects summary */}
-    <p class="mb-4">
-      I have been involved in several funded projects. You can find more
-      information about them on the projects page.
-    </p>
-    <a href="/research/fundedProjects">
-      <Button>Check out my funded projects</Button>
-    </a>
-  </Section>
-  {/* Students: Current and Previous Link to students page */}
-  <Section class="my-4">
-    <div class="flex items-center gap-4">
-      <h1 class="font-display text-3xl sm:text-4xl leading-loose">Students</h1>
-    </div>
-    <!-- Just link! -->
-    <p class="mb-4">
-      I have supervised several students in their research projects. You can
-      find more information about them on the students page.
-    </p>
-    <a href="/research/students">
-      <Button>Check out work by my students</Button>
-    </a>
-  </Section>
-  {/* Publications */}
+    <Fragment slot="head">
+        <title>{GLOBAL.username} • Research</title>
+        <meta
+            name="description"
+            content={`A collection of research instrests, papers, projrcts by {GLOBAL.username}.`}
+        />
+        <meta
+            property="og:title"
+            content={`${GLOBAL.blogTitle} • ${GLOBAL.username}`}
+        />
+        <meta property="og:description" content={GLOBAL.blogShortDescription} />
+        <meta
+            property="og:image"
+            content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`}
+        />
+        <meta property="og:url" content={`${GLOBAL.rootUrl}/blog`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content={`${GLOBAL.blogTitle} • ${GLOBAL.username}`}
+        />
+        <meta
+            name="twitter:description"
+            content={GLOBAL.blogShortDescription}
+        />
+        <meta
+            name="twitter:image"
+            content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`}
+        />
+        <meta http-equiv="content-language" content="en" />
+        <meta name="language" content="English" />
+        <link rel="canonical" href={`${GLOBAL.rootUrl}/blog`} />
+    </Fragment>
+    <Section>
+        <div class="flex items-center gap-4">
+            <h1 class="font-display text-3xl sm:text-4xl leading-loose">
+                Research Interests
+            </h1>
+        </div>
+        {/* Research Intrests summary */}
+        <p class="mb-4">
+            My current interests are in software architecture, computer science
+            education and educational technology.
+        </p>
+        <ul>
+            {
+                researchInterests.map((research_interest) => (
+                    <li>
+                        <ArticleSnippet
+                            title={research_interest.title}
+                            description={research_interest.description}
+                            duration={`${research_interest.time} min`}
+                            url={`/research/${research_interest.filename}`}
+                            timestamp={research_interest.timestamp}
+                        />
+                    </li>
+                ))
+            }
+        </ul>
+    </Section>
+    {/* Funded Projects */}
+    <Section class="my-4">
+        <div class="flex items-center gap-4">
+            <h1 class="font-display text-3xl sm:text-4xl leading-loose">
+                Funded Projects
+            </h1>
+        </div>
+        {/* Funded Projects summary */}
+        <p class="mb-4">
+            I have been involved in several funded projects. You can find more
+            information about them on the projects page.
+        </p>
+        <a href="/research/fundedProjects">
+            <Button>Check out my funded projects</Button>
+        </a>
+    </Section>
+    {/* Students: Current and Previous Link to students page */}
+    <Section class="my-4">
+        <div class="flex items-center gap-4">
+            <h1 class="font-display text-3xl sm:text-4xl leading-loose">
+                Students
+            </h1>
+        </div>
+        <!-- Just link! -->
+        <p class="mb-4">
+            I have supervised several students in their research projects. You
+            can find more information about them on the students page.
+        </p>
+        <a href="/research/students">
+            <Button>Check out work by my students</Button>
+        </a>
+    </Section>
+    {/* Publications */}
 </Layout>

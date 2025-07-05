@@ -1,0 +1,65 @@
+#+TITLE: Website Configuration
+#+AUTHOR: Venkatesh Choppella
+#+DATE: 2025-07-05
+#+USERNAME: Venkatesh Choppella
+#+ROOT_URL: https://vxc.github.io
+#+EMAIL: venkatesh.choppella@iiit.ac.in
+#+SHORT_DESCRIPTION: Associate Professor, SERC @ IIIT Hyderabad
+#+LONG_DESCRIPTION_1: Associate Professor at the Software Engineering Research Centre, IIIT Hyderabad
+#+LONG_DESCRIPTION_2: Associate Dean, Division of Flexible Learning, IIIT Hyderabad
+#+PROFILE_IMAGE: /images/venkatesh-chopella.png
+#+OFFICE_HOURS: Mondays: 4pm-5pm, Room 501, Himalaya D Block or by appointment.
+#+ADMINISTRATIVE_EMAIL: adminass@iiit.ac.in
+#+EXECUTIVE_ASSISTANT_EMAIL: execass@iiit.ac.in
+#+GITHUB_PROFILE: null
+#+TWITTER_PROFILE: null
+#+PUBLICATIONS_NAME: Publications
+#+ARTICLES_NAME: Articles
+#+PROJECTS_NAME: Ongoing Projects
+#+VIEW_ALL: View All
+#+NO_ARTICLES: No featured articles yet.
+#+NO_PROJECTS: No featured projects yet.
+#+BLOG_TITLE: My Thoughts & Takes
+#+BLOG_SHORT_DESCRIPTION: Practical wisdom, unfiltered thoughts, and hot takes.
+#+BLOG_LONG_DESCRIPTION: Web development, tech trends, and the occasional programming mishap.
+#+PROJECT_TITLE: Projects and Code
+#+PROJECT_SHORT_DESCRIPTION: A list of my web development projects and developer tools.
+#+PROJECT_LONG_DESCRIPTION: All of my projects, including both frontend and full-stack applications.
+#+POEM_NAME: Functional Programming for no Rhyme or Reason
+#+POEM_DESCRIPTION: - Venkatesh Choppella
+#+MENU_HOME: /
+#+MENU_PROJECTS: /projects
+#+MENU_RESEARCH: /research
+#+MENU_TEACHING: /teaching
+#+MENU_BIOGRAPHY: /biography
+#+MENU_BIBLIOGRAPHY: /bibliography
+#+BIB_JOURNAL_TITLE: Journal Publications
+#+BIB_JOURNAL_FILE: journal.bib
+#+BIB_JOURNAL_DESC: Peer-reviewed journal articles
+#+BIB_CONF_TITLE: Conference Papers
+#+BIB_CONF_FILE: conf-papers.bib
+#+BIB_CONF_DESC: Conference proceedings and papers
+#+BIB_TR_TITLE: Technical Reports
+#+BIB_TR_FILE: tr.bib
+#+BIB_TR_DESC: Technical reports and institutional publications
+#+BIB_SUPERVISION_TITLE: Theses Supervised
+#+BIB_SUPERVISION_FILE: supervision.bib
+#+BIB_SUPERVISION_DESC: PhD and Masters theses supervised
+#+BIB_TALKS_TITLE: Talks and Presentations
+#+BIB_TALKS_FILE: talks.bib
+#+BIB_TALKS_DESC: Invited talks and presentations
+#+BIB_POSTERS_TITLE: Posters
+#+BIB_POSTERS_FILE: posters.bib
+#+BIB_POSTERS_DESC: Conference posters and demonstrations
+#+BIB_PATENTS_TITLE: Patents
+#+BIB_PATENTS_FILE: patents.bib
+#+BIB_PATENTS_DESC: Filed and granted patents
+#+BIB_WIP_TITLE: Work in Progress
+#+BIB_WIP_FILE: wip.bib
+#+BIB_WIP_DESC: Ongoing research and draft papers
+
+* Venkatesh Choppella
+
+ Professor at the Software Engineering Research Centre, IIIT Hyderabad
+
+ Dean, Division of Flexible Learning, IIIT Hyderabad

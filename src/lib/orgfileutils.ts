@@ -71,6 +71,9 @@ const parseOrgFile = <T extends object>(
         case "filetags":
           frontmatter.tags = value.split(":").filter((tag) => tag.length > 0);
           break;
+        case "featured":
+          frontmatter.featured = value == "true";
+          break;
         default:
           frontmatter[lowercaseKey] = value;
       }
