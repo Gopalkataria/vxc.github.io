@@ -2,8 +2,6 @@ import { clsx, type ClassValue } from "clsx";
 import fs from "node:fs/promises";
 import { twMerge } from "tailwind-merge";
 import { GLOBAL } from "./variables";
-import { parse } from "orga";
-import { html } from "orga-html";
 
 type MarkdownData<T extends object> = {
   frontmatter: T;
@@ -13,13 +11,6 @@ type MarkdownData<T extends object> = {
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
-}
-
-export async function renderOrgToHtml(orgPath) {
-  const orgText = await fs.readFile(path.resolve(orgPath), "utf8");
-  const tree = parse(orgText);
-  const htmlOutput = html(tree);
-  return htmlOutput;
 }
 
 /**

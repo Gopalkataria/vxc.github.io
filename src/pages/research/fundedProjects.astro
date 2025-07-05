@@ -5,7 +5,7 @@ import { GLOBAL } from "../../lib/variables";
 import { orgtohtml } from "../../lib/orgtohtml";
 
 const studentsHtml = await orgtohtml(
-    "src/orgfiles/research/students/index.org",
+    "src/orgfiles/research/fundedProjects/index.org",
 );
 ---
 
@@ -14,7 +14,7 @@ const studentsHtml = await orgtohtml(
         <title>{GLOBAL.username} • Research Students</title>
         <meta
             name="description"
-            content={`Research students and mentorship by ${GLOBAL.username}`}
+            content={`Funded Projects of  ${GLOBAL.username}`}
         />
         <meta
             property="og:title"
@@ -22,7 +22,7 @@ const studentsHtml = await orgtohtml(
         />
         <meta
             property="og:description"
-            content={`Research students and mentorship by ${GLOBAL.username}`}
+            content={`Funded Projects of  ${GLOBAL.username}`}
         />
         <meta property="og:image" content={`${GLOBAL.rootUrl}/vxc.png`} />
         <meta
@@ -36,12 +36,15 @@ const studentsHtml = await orgtohtml(
         />
         <meta
             name="twitter:description"
-            content={`Research students and mentorship by ${GLOBAL.username}`}
+            content={`Funded Projects of  ${GLOBAL.username}`}
         />
         <meta name="twitter:image" content={`${GLOBAL.rootUrl}/vxc.png`} />
         <meta http-equiv="content-language" content="en" />
         <meta name="language" content="English" />
-        <link rel="canonical" href={`${GLOBAL.rootUrl}/research/students`} />
+        <link
+            rel="canonical"
+            href={`${GLOBAL.rootUrl}/research/fundedProjects`}
+        />
     </Fragment>
     <Section class="my-16">
         <div class="prose lg:prose-xl max-w-none">

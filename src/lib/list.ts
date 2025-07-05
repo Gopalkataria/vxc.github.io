@@ -65,7 +65,7 @@ export const projects = (
         liveUrl: data.frontmatter.liveUrl,
         featured: data.frontmatter.featured,
         timestamp: data.frontmatter.timestamp,
-        filename: `/projects/${data.frontmatter.filename}`,
+        filename: data.frontmatter.filename,
       };
     },
   )
