@@ -21,7 +21,8 @@ posters.bib \
 thesis.bib \
 tr.bib \
 unpublished.bib \
-ws-papers.bib
+ws-papers.bib \
+ws.bib
 
 
 allbib=all.bib
@@ -45,12 +46,12 @@ bibtex2html-options= --title "Venkatesh Choppella bibliography" \
 
 
 
-all: pdf 
+all: pdf
 
 init:
 	(mkdir -p ${build-biblio})
 
-pdf: 
+pdf:
 	latexmk -pdf -pdflatex="pdflatex --shell-escape %O %S"  ${all}
 
 
@@ -58,10 +59,12 @@ html: init
 	(\rm -rf ${allbib}; cat ${bibfiles} > ${allbib}; ${bibtex2html} $(bibtex2html-options) $(allbib); mv *.html ${build-biblio}; rsync -a papers ${build-biblio}; rsync -a style ${build-biblio})
 
 
+filtered:
+	latexmk -pdf filtered.tex 
+
 clean:
 	(rm -rf ${build} *.aux *.bcf  *.bbl  *.blg  *.dvi  *.fdb_latexmk \
 	*.fls *.html *.log *.out *.pdf *.ps *.toc *.run.xml)
 
 date:
 	echo $(footer)
-

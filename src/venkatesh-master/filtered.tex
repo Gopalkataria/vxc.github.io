@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[english]{babel}
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=ydnt,
+  maxbibnames=20,
+  maxcitenames=3,
+  hyperref=true,
+  backref=true,
+  url=true,
+   defernumbers=true
+]{biblatex}
+\addbibresource{accepted.bib}
+\addbibresource{conf-papers.bib}
+\addbibresource{journal.bib}
+\addbibresource{patents.bib}
+\addbibresource{posters.bib}
+\addbibresource{thesis.bib}
+\addbibresource{tr.bib}
+\addbibresource{unpublished.bib}
+\addbibresource{ws-papers.bib}
+\addbibresource{ws.bib}
+\addbibresource{wip.bib}
+\addbibresource{talks.bib}
+\addbibresource{submitted.bib}
+\addbibresource{misc.bib}
+\addbibresource{students.bib}
+
+\newcommand{\recent}[2]{%
+\defbibcheck{checkrecent}{%
+  \iffieldint{year}
+             {\ifnumless{\thefield{year}}{#1}
+               {\skipentry}
+               {\ifnumgreater{\thefield{year}}{#2}
+                 {\skipentry} {}}} {\skipentry}}}
+
+\input{sorting-scheme.tex}
+\author{Venkatesh Choppella}
+\date{\today}
+\title{Venkatesh Choppella Bibliography (2023--present)}
+\hypersetup{
+  pdfauthor={Venkatesh Choppella},
+  pdftitle={Venkatesh Choppella Bibliography},
+  pdflang={English}
+}
+
+\begin{document}
+\maketitle
+
+% Publications section
+\begin{refsection}
+	\recent{2023}{2026} % defines checkrecent
+	\nocite{*} % Only one \nocite{*} needed
+
+	\printbibliography[check={checkrecent}, keyword={accepted}, title={Accepted for Publication}]
+	\printbibliography[check={checkrecent}, keyword={conf-paper}, notkeyword={accepted}, title={Refereed Conference and Workshop Papers}]
+	\printbibliography[check={checkrecent}, keyword={journal-article}, title={Refereed Journal Articles}]
+	\printbibliography[check={checkrecent}, keyword={tech-report}, title={Technical Reports}]
+	\printbibliography[check={checkrecent}, keyword={patent}, title={Patents}]
+	\printbibliography[check={checkrecent}, keyword={poster}, title={Posters}]
+	\printbibliography[check={checkrecent}, keyword={ws}, title={Workshops and Short Courses}]
+\end{refsection}
+
+% Students section
+\section*{Research Students :}
+\begin{refsection}
+	\nocite{*} % Add all student entries
+
+	\printbibliography[keyword={phd}, keyword={graduated}, title={Graduated PhD students}]
+	\printbibliography[keyword={phd}, keyword={current}, title={Current PhD students}]
+	\printbibliography[keyword={ms}, title={MS via Research students}]
+	\printbibliography[keyword={honors}, title={Honors students}]
+\end{refsection}
+
+\end{document}

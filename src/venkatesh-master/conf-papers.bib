@@ -1,4 +1,69 @@
-@inproceedings{10.1145/3452383.3453713,
+
+@inproceedings{2025-kulindala-iticse-tracing-control-flow,
+  location  = {New York, {NY}, {USA}},
+  title     = {A Scaffolded Approach for Tracing Control-Flow in Simplified Python Programs},
+  isbn      = {979-8-4007-1567-9},
+  url       = {https://doi.org/10.1145/3724363.3729044},
+  doi       = {10.1145/3724363.3729044},
+  series    = {{ITiCSE} 2025},
+  abstract  = {The ability of students to read, understand
+                  and explain code is tightly interlinked to
+                  their ability to trace. Multiple studies
+                  have shown that tracing helps students
+                  improve their comprehension of
+                  code. Analysis of the traces also provides
+                  insight into student misconceptions about
+                  program execution. We are interested in
+                  exploring pen-and-paper activities related
+                  to tracing control-flow. While the
+                  literature presents several tracing
+                  methodologies, existing pen-and-paper
+                  activities prioritise tracking the values
+                  of variables as they change throughout the
+                  program; control-flow is not adequately
+                  addressed. To fill this gap, we propose a
+                  comprehensive suite of class activities
+                  around control-flow of programs and report
+                  our experience deploying it in a
+                  first-year university programming
+                  course. In these activities, students
+                  construct six hand-drawn artefacts
+                  representing the static and dynamic
+                  aspects of a program's control-flow. We
+                  use a simplified subset of Python that
+                  includes sequential, conditional,
+                  iterative and (first-order) procedural
+                  control. We chose this subset to match the
+                  syllabus of the introduction to computer
+                  programming course of our university. We
+                  report the results of a preliminary study
+                  conducted to explore the feasibility of
+                  constructing the artefacts. Most students
+                  correctly understood the structure of the
+                  artefacts. We also report what these
+                  artefacts revealed about students'
+                  misconceptions related to control-flow in
+                  programs. Students had difficulty
+                  identifying the destination of a procedure
+                  call and its return. A significant number
+                  of their misconceptions were related to
+                  transfer of control when encountering
+                  errors.},
+  pages     = {51--57},
+  booktitle = {Proceedings of the 30th {ACM} Conference on Innovation and Technology in Computer Science Education V. 1},
+  keywords = {accepted, conf-paper,cs-ed},
+  publisher = {Association for Computing Machinery},
+  author    = {Kulindala, Gnaneswar and Srikanth, Anushka and Choppella, Venkatesh},
+  urldate   = {2025-06-19},
+  date      = {2025-06-17},
+  year = {2025}
+}
+
+
+
+
+
+@inproceedings{2021-isec-report,
 author = {Choppella, Venkatesh and Satpathy, Manoranjan},
 title = {A Report on the PhD Symposium at ISEC 2021},
 year = {2021},
@@ -11,27 +76,10 @@ abstract = {The annual ACM Innovations in Software Engineering Conference (ISEC)
 booktitle = {Proceedings of the 14th Innovations in Software Engineering Conference (Formerly Known as India Software Engineering Conference)},
 articleno = {24},
 numpages = {2},
-keywords = {Software Engineering},
+keywords = {conf-paper,Software Engineering},
 location = {Bhubaneswar, Odisha, India},
-series = {ISEC '21}
-}
-
-@inproceedings{10.1145/3578527.3578548,
-author = {Kumar, Mrityunjay and Choppella, Venkatesh},
-title = {A modeling language for novice engineers to design well at SaaS product companies},
-year = {2023},
-isbn = {9798400700644},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3578527.3578548},
-doi = {10.1145/3578527.3578548},
-abstract = {Software-as-a-Service (SaaS) product companies have brought in significant changes in how we build software from architecture and engineering process perspective. SaaS products are large, distributed software systems hosted in cloud and built using collaborating services (or micro-services). The software releases happen in days and weeks, necessitating an agile development process. Novice engineers (those who join the company fresh from college) need to become comfortable with complex systems and proficient in agile delivery with high quality, otherwise they fall behind in productivity. The paper posits that, to be successful at these SaaS product companies, the novice engineers need good modeling and design skills. While this has been for all software development, the changes driven by SaaS products have made this need more acute. Such skills will allow them to capture their feature behaviors (in context of their understanding of the larger product) in an implementation-independent manner and any knowledge gaps can be identified and bridged by their collaborators. We propose a modeling language that is easy for them to learn and use, and which has characteristics suitable for the kind of engineering work they need to do in their early years in a SaaS product company. This modeling language is based on the notion of Transition Systems. The paper demonstrates the usage and value of this language by creating a model for a real feature. The modeling language is quite general and transcends abstraction boundaries. We also present a modeling process that should be used with this language for better results. This is a short position paper that presents an idea about a new modeling language for a specific purpose (helping novice engineers design well at SaaS product companies). Validation studies for the language and the design process is a work in progress and the results will be shared in a full paper later.},
-booktitle = {Proceedings of the 16th Innovations in Software Engineering Conference},
-articleno = {24},
-numpages = {5},
-keywords = {Transition Systems, Software Modeling Language, SaaS product design, Novice Engineer},
-location = {Allahabad, India},
-series = {ISEC '23}
+series = {ISEC '21},
+pdf = {papers/2021-isec-report.pdf}
 }
 
 
@@ -41,12 +89,47 @@ title = {Mapcode Machines for Expressing and Tracing Iterative Algorithms},
 year = {2025},
 publisher = {Association for Computing Machinery},
 address = {New York, NY, USA},
-abstract = {The paper presents a pedagogy using Mapcode to express and trace algorithms. The technique was trialled with two groups of students who performed highly in the assessment. Techniques for understanding algorithms are a very important part of the CS curriculum. The use of Mapcode (a theory from mathematics) to express/trace algorithms is novel.},
+abstract = {
+  Algorithms are a fundamental part of computer science
+  education, with expressing and tracing forming key aspects
+  of their study.  Both pseudocode and code are used to
+  express algorithms.  Pseudocode helps abstract away
+  specifics of the programming language when specifying an
+  algorithm, but it can introduce ambiguities due to its
+  informal nature and does not support a structured way to
+  trace an algorithm.  On the other hand, tracing a program
+  provides a precise description but can conflate
+  algorithmic logic with language-specific details,
+  obscuring the inherent structure of an algorithm.
+
+  In this experience report, we propose employing the
+  Mapcode framework for expressing and tracing algorithms.
+  Mapcode represents an algorithm as a set of
+  transformations between well-defined spaces, naturally
+  producing execution traces that are independent of
+  programming constructs.  Unlike traditional notional
+  machines, which model the execution of programs, Mapcode
+  machines model the high-level execution of algorithms.
+  Mapcode traces reflect underlying logic and are
+  independent of programming-language-specific data and
+  control structures like while loops.  
+  
+  We report preliminary findings from two classroom
+  activities which explored the application of Mapcode to
+  express and trace algorithms.  In the first activity,
+  third-year undergraduate students drew Mapcode Execution
+  Diagrams to trace simple algorithms already specified in
+  the Mapcode framework.  We found that a majority of
+  students were successful in constructing the diagrams.  In
+  the second activity, students in a Principles of
+  Programming Languages course successfully defined
+  algorithms from various paradigms (greedy, dynamic
+  programming, sorting, etc.) as Mapcode machines and
+  implemented them in Python and Racket.},
 booktitle = {Proceedings of the ACM Conference on Global Computing Education},
-keywords = {conf-paper, cs-ed, algorithms, mapcode, pedagogy, iterative algorithms, tracing},
-location = {TBD}, % Location not specified in acceptance notification
-series = {CompEd '25},
-note = {Accepted for publication, camera-ready deadline August 2025}
+keywords = {accepted, conf-paper, cs-ed, algorithms, mapcode, pedagogy, iterative algorithms, tracing},
+series = {CompEd 2025},
+note = {Accepted for publication}
 }
 
 
