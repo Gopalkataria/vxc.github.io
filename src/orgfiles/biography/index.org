@@ -1,0 +1,11 @@
+#+TITLE: Research Students
+#+DESCRIPTION: A list of current and past research students
+#+TAGS:
+#+FEATURED: false
+#+TIMESTAMP: 2024-12-14T02:39:03+00:00
+#+FILENAME: biography
+
+
+* testing
+
+** idk what was srong here

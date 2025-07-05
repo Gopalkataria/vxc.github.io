@@ -1,0 +1,30 @@
+#+TITLE: Virtual labs - Operating systems
+#+DESCRIPTION: Under the initiative of Ministry of Education, Govt. of India, we developed a virtual lab for Operating Systems. The lab is designed to help students understand the concepts of Operating Systems through interactive simulations.
+#+LAYOUT: ../../layouts/ProjectLayout.astro
+#+TAGS: Operating Systems, Virtual Labs, Education, Sponsered Project
+#+IMAGEURL: /images/vlabs.jpg
+#+LIVEURL: https://virtual-labs.github.io/exp-non-preemptive-scheduling-iiith/
+#+TIMESTAMP: 2025-02-25T02:39:03+00:00
+#+FEATURED: true
+#+FILENAME: VirtualLabs-OperatingSystems
+
+* Virtual labs - Operating systems
+
+** Project Overview
+
+Under the initiative of [[https://www.education.gov.in/][Ministry of Education, Govt. of India]], we developed a virtual lab for Operating Systems. The lab is designed to help students understand the concepts of Operating Systems through interactive simulations.
+
+** Key Features
+- Interactive simulations for OS concepts
+- Educational focus on practical understanding
+- Government-sponsored educational initiative
+- Accessible online learning platform
+
+** Laboratory Components
+- Non-preemptive scheduling algorithms
+- Process management simulations
+- Memory management demonstrations
+- File system operations
+
+** Access
+Virtual lab available at: [[https://virtual-labs.github.io/exp-non-preemptive-scheduling-iiith/][OS Virtual Lab - Non-preemptive Scheduling]]

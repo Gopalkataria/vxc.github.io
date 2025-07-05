@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/common/Section.astro";
+import { GLOBAL } from "../../lib/variables";
+import { orgtohtml } from "../../lib/orgtohtml";
+
+const studentsHtml = await orgtohtml("src/orgfiles/biography/index.org");
+---
+
+<Layout>
+    <Fragment slot="head">
+        <title>{GLOBAL.username} • Research Students</title>
+        <meta
+            name="description"
+            content={`Research students and mentorship by ${GLOBAL.username}`}
+        />
+        <meta
+            property="og:title"
+            content={`${GLOBAL.username} • Research Students`}
+        />
+        <meta
+            property="og:description"
+            content={`Research students and mentorship by ${GLOBAL.username}`}
+        />
+        <meta property="og:image" content={`${GLOBAL.rootUrl}/vxc.png`} />
+        <meta
+            property="og:url"
+            content={`${GLOBAL.rootUrl}/research/students`}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content={`${GLOBAL.username} • Research Students`}
+        />
+        <meta
+            name="twitter:description"
+            content={`Research students and mentorship by ${GLOBAL.username}`}
+        />
+        <meta name="twitter:image" content={`${GLOBAL.rootUrl}/vxc.png`} />
+        <meta http-equiv="content-language" content="en" />
+        <meta name="language" content="English" />
+        <link rel="canonical" href={`${GLOBAL.rootUrl}/research/students`} />
+    </Fragment>
+    <Section class="my-16">
+        <div class="prose lg:prose-xl max-w-none">
+            <div set:html={studentsHtml} />
+        </div>
+    </Section>
+</Layout>

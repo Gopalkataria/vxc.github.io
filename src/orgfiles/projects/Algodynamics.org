@@ -1,0 +1,24 @@
+#+TITLE: Algodynamics
+#+DESCRIPTION: Algodynamics applies system dynamics approach to describe and teach algorithms. It is a visual and interactive way to learn algorithms.
+#+LAYOUT: ../../layouts/ProjectLayout.astro
+#+TAGS: Computing Education, Educational Technology, Systems Development
+#+IMAGEURL: /images/mergesort.png
+#+LIVEURL: http://algodynamics.io/mergesort/
+#+TIMESTAMP: 2025-02-26T02:39:03+00:00
+#+FEATURED: true
+#+FILENAME: Algodynamics
+
+* Algodynamics
+
+** Project Overview
+
+Algodynamics applies system dynamics approach to describe and teach algorithms. It is a visual and interactive way to learn algorithms.
+
+** Key Features
+- Visual representation of algorithm execution
+- Interactive learning environment
+- System dynamics modeling approach
+- Educational focus on algorithm comprehension
+
+** Access
+Live demonstration available at: [[http://algodynamics.io/mergesort/][Algodynamics Mergesort Demo]]

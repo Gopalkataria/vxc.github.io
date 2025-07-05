@@ -1,0 +1,28 @@
+#+TITLE: Is Transition Systems Approach of Modeling Software Systems Hard to Learn and Use?
+#+DESCRIPTION: This project aims to investigate the learning curve of the Transition Systems Approach to modeling software systems.
+#+LAYOUT: ../../layouts/ProjectLayout.astro
+#+TAGS: Modeling, Systems Development, Transition Systems
+#+IMAGEURL: /images/MJposter.png
+#+TIMESTAMP: 2025-02-24T02:39:03+00:00
+#+FEATURED: true
+#+FILENAME: TransitionSystemsApproachToModdeling
+
+* Is Transition Systems Approach of Modeling Software Systems Hard to Learn and Use?
+
+** Research Objective
+
+This project aims to investigate the learning curve of the Transition Systems Approach to modeling software systems.
+
+** Background
+
+Transition Systems are a formalism used to model software systems. They are used to describe the behavior of a system in terms of states and transitions. Transition Systems are widely used in software engineering for various purposes such as requirements analysis, design, and verification.
+
+** Research Question
+
+However, we are trying to understand if the Transition Systems Approach is hard to learn and use for software engineers.
+
+** Key Research Areas
+- Learning curve analysis
+- Usability assessment
+- Comparison with other modeling approaches
+- Educational effectiveness evaluation

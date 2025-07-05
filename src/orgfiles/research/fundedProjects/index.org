@@ -1,0 +1,52 @@
+#+TITLE: Funded Projects
+#+DESCRIPTION: A list of funded projects that I have worked on.
+#+LAYOUT: ../../../layouts/ResearchLayout.astro
+#+TAGS:
+#+FEATURED: false
+#+TIMESTAMP: 2024-12-14T02:39:03+00:00
+#+FILENAME: fundedProjects
+
+** Virtual Labs, Phase II and III
+*Role:* Co-PI
+*Period:* 2016-2020
+*Sponsor:* MHRD, Govt. of India
+*Partners:* IITs at Bombay, Delhi, Guwahati, Kanpur, Kharagpur, Roorkee, Amrita University, COE Pune, Dayalbagh University, NIT Surathkal
+*Budget:* Rs. 100 Crores for 5 years
+
+** State Variable Approach to the Model-Driven Development of Software for Reactive Systems
+*Role:* PI
+*Period:* 2011-2013
+*Sponsor:* Siemens India, Bangalore
+*Budget:* Rs. 14 Lakhs
+
+** Distributed Model Checking
+*Role:* Co-PI
+*Period:* 2014-2016
+*Sponsor:* Hitachi India Limited
+*Budget:* Rs. 15 Lakhs
+
+** Virtual Labs Phase I
+*Period:* 2010-2014
+*Sponsor:* Virtual Labs consortium under the Virtual Labs main phase project
+*Budget:* Rs. 3.3 Crores
+
+** European Commission Erasmus Mundus External Cooperation Window
+*Role:* Co-PI
+*Period:* 2008-2009
+*Sponsor:* European Research and Educational Collaboration with Asia Project for Academic Mobility
+*Notes:* Institute Coordinator for IIITMK
+*Website:* [[http://www.mrtc.mdh.se/eureca/]]
+*Budget:* 10,000 Euro
+
+** Information Security Education and Awareness (ISEA)
+*Role:* PI
+*Period:* 2006-2009
+*Sponsor:* Ministry of Information Technology, Government of India
+*Notes:* Principal Investigator at Participating Institution IIITM-K
+*Budget:* Rs. 3 Lakhs per annum
+
+** Police Portal for Community Interaction
+*Role:* Co-PI
+*Period:* 2004-2005
+*Sponsor:* Government of Kerala
+*Budget:* Rs. 2.9 Lakhs
