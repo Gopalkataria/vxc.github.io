@@ -5,6 +5,7 @@ http://localhost:8080
 
 
 - Edit markdown files in the `markdown/` folder, run make demo again to see changes. output is in dist directory
+- for common configuration options ( change name, email, short descriptions around the site) use `markdown/config.md`
 ---
 
 ## Project Structure
