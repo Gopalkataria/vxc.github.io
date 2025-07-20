@@ -1,131 +1,109 @@
-// Parse org file properties from content string
-function parseOrgProperties(content: string): Record<string, string> {
-  const properties: Record<string, string> = {};
-  const lines = content.split("\n");
+// Set any item to undefined to remove it from the site or to use the default value
 
-  for (const line of lines) {
-    const match = line.match(/^#\+(\w+):\s*(.*)$/);
-    if (match) {
-      const [, key, value] = match;
-      properties[key] = value.trim();
-    }
-  }
-
-  return properties;
-}
-
-// Import org file content as raw text (Astro/Vite will handle this at build time)
-import orgContent from "../orgfiles/main.org?raw";
-
-// Parse the org file content
-const props = parseOrgProperties(orgContent);
-
-// Helper function to get property or return undefined for null values
-const getProp = (key: string, defaultValue: any = undefined) => {
-  const value = props[key];
-  return value === "null" ? null : value || defaultValue;
-};
-
-// Export configuration in original format
 export const GLOBAL = {
   // Site metadata
-  username: getProp("USERNAME"),
-  rootUrl: getProp("ROOT_URL"),
-  email: getProp("EMAIL"),
+  username: "Venkatesh Choppella",
+  rootUrl: "https://vxc.github.io",
+  email: "venkatesh.choppella@iiit.ac.in",
   longDescription: [
-    getProp("LONG_DESCRIPTION_1"),
-    getProp("LONG_DESCRIPTION_2"),
-  ].filter(Boolean),
-  shortDescription: getProp("SHORT_DESCRIPTION"),
+    "Associate Professor at the Software Engineering Research Centre, IIIT Hyderabad",
+    "Associate Dean, Division of Flexible Learning, IIIT Hyderabad",
+  ],
+  shortDescription: "Associate Professor, SERC @ IIIT Hyderabad",
 
-  // Assistive staff E-mail ids
-  administrativeEmail: getProp("ADMINISTRATIVE_EMAIL"),
-  executiveAssistantEmail: getProp("EXECUTIVE_ASSISTANT_EMAIL"),
+  // Assistive staff E-mail ids, leave blank to hide in contact section
+  administrativeEmail: "adminass@iiit.ac.in",
+  executiveAssistantEmail: "execass@iiit.ac.in",
 
   // Social media links
-  githubProfile: getProp("GITHUB_PROFILE"),
-  twitterProfile: getProp("TWITTER_PROFILE"),
+  githubProfile: null,
+  twitterProfile: null,
 
-  // Publications related details
-  publicationsName: getProp("PUBLICATIONS_NAME"),
+  // publications related details
+  publicationsName: "Publications",
 
   // Common text names used throughout the site
-  articlesName: getProp("ARTICLES_NAME"),
-  projectsName: getProp("PROJECTS_NAME"),
-  viewAll: getProp("VIEW_ALL"),
+  articlesName: "Articles",
+  projectsName: "Ongoing Projects",
+  viewAll: "View All",
 
   // Common descriptions used throughout the site
-  noArticles: getProp("NO_ARTICLES"),
-  noProjects: getProp("NO_PROJECTS"),
+  noArticles: "No featured articles yet.",
+  noProjects: "No featured projects yet.",
 
   // Blog metadata
-  blogTitle: getProp("BLOG_TITLE"),
-  blogShortDescription: getProp("BLOG_SHORT_DESCRIPTION"),
-  blogLongDescription: getProp("BLOG_LONG_DESCRIPTION"),
+  blogTitle: "My Thoughts & Takes",
+  blogShortDescription: "Practical wisdom, unfiltered thoughts, and hot takes.",
+  blogLongDescription:
+    "Web development, tech trends, and the occasional programming mishap.",
 
   // Project metadata
-  projectTitle: getProp("PROJECT_TITLE"),
-  projectShortDescription: getProp("PROJECT_SHORT_DESCRIPTION"),
-  projectLongDescription: getProp("PROJECT_LONG_DESCRIPTION"),
+  projectTitle: "Projects and Code",
+  projectShortDescription:
+    "A list of my web development projects and developer tools.",
+  projectLongDescription:
+    "All of my projects, including both frontend and full-stack applications.",
 
   // Profile
-  profileImage: getProp("PROFILE_IMAGE"),
-  officeHours: getProp("OFFICE_HOURS"),
+  profileImage: "/images/venkatesh-chopella.png",
+  officeHours:
+    "Mondays: 4pm-5pm, Room 501, Himalaya D Block or by appointment.",
 
   // Poem Controls
-  poemName: getProp("POEM_NAME"),
-  poemDescription: getProp("POEM_DESCRIPTION"),
+  poemName: "Functional Programming for no Rhyme or Reason",
+  poemDescription: "- Venkatesh Choppella",
 
   // Menu items
   menu: {
-    home: getProp("MENU_HOME"),
-    projects: getProp("MENU_PROJECTS"),
-    research: getProp("MENU_RESEARCH"),
-    teaching: getProp("MENU_TEACHING"),
-    biography: getProp("MENU_BIOGRAPHY"),
-    bibliography: getProp("MENU_BIBLIOGRAPHY"),
+    home: "/",
+    projects: "/projects",
+    research: "/research",
+    teaching: "/teaching",
+    biography: "/biography",
+    bibliography: "/bibliography",
+    // blog: "/blog",
   },
 };
 
 export const bibSections = [
   {
-    title: getProp("BIB_JOURNAL_TITLE"),
-    file: getProp("BIB_JOURNAL_FILE"),
-    description: getProp("BIB_JOURNAL_DESC"),
+    title: "Journal Publications",
+    file: "journal.bib",
+    description: "Peer-reviewed journal articles",
   },
   {
-    title: getProp("BIB_CONF_TITLE"),
-    file: getProp("BIB_CONF_FILE"),
-    description: getProp("BIB_CONF_DESC"),
+    title: "Conference Papers",
+    file: "conf-papers.bib",
+    description: "Conference proceedings and papers",
   },
   {
-    title: getProp("BIB_TR_TITLE"),
-    file: getProp("BIB_TR_FILE"),
-    description: getProp("BIB_TR_DESC"),
+    title: "Technical Reports",
+    file: "tr.bib",
+    description: "Technical reports and institutional publications",
   },
   {
-    title: getProp("BIB_SUPERVISION_TITLE"),
-    file: getProp("BIB_SUPERVISION_FILE"),
-    description: getProp("BIB_SUPERVISION_DESC"),
+    title: "Theses Supervised",
+    file: "supervision.bib",
+    description: "PhD and Masters theses supervised",
   },
   {
-    title: getProp("BIB_TALKS_TITLE"),
-    file: getProp("BIB_TALKS_FILE"),
-    description: getProp("BIB_TALKS_DESC"),
+    title: "Talks and Presentations",
+    file: "talks.bib",
+    description: "Invited talks and presentations",
   },
   {
-    title: getProp("BIB_POSTERS_TITLE"),
-    file: getProp("BIB_POSTERS_FILE"),
-    description: getProp("BIB_POSTERS_DESC"),
+    title: "Posters",
+    file: "posters.bib",
+    description: "Conference posters and demonstrations",
   },
   {
-    title: getProp("BIB_PATENTS_TITLE"),
-    file: getProp("BIB_PATENTS_FILE"),
-    description: getProp("BIB_PATENTS_DESC"),
+    title: "Patents",
+    file: "patents.bib",
+    description: "Filed and granted patents",
   },
   {
-    title: getProp("BIB_WIP_TITLE"),
-    file: getProp("BIB_WIP_FILE"),
-    description: getProp("BIB_WIP_DESC"),
+    title: "Work in Progress",
+    file: "wip.bib",
+    description: "Ongoing research and draft papers",
   },
 ];

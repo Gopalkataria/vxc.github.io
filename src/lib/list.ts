@@ -1,5 +1,5 @@
 import type { ArticleFrontmatter, ProjectFrontmatter } from "./types";
-import { getShortDescription, processContentInDir } from "./orgfileutils";
+import { getShortDescription, processContentInDir } from "./utils";
 
 export const articles = (
   await processContentInDir<ArticleFrontmatter, ArticleFrontmatter>(
@@ -15,7 +15,7 @@ export const articles = (
         time: data.frontmatter.time,
         featured: data.frontmatter.featured,
         timestamp: data.frontmatter.timestamp,
-        filename: data.frontmatter.filename,
+        filename: `/blog/${data.frontmatter.filename}`,
       };
     },
   )
@@ -24,6 +24,7 @@ export const articles = (
   const dateB = new Date(b.timestamp);
   return dateB.getTime() - dateA.getTime();
 });
+
 
 export const researchInterests = (
   await processContentInDir<ArticleFrontmatter, ArticleFrontmatter>(
@@ -39,7 +40,7 @@ export const researchInterests = (
         time: data.frontmatter.time,
         featured: data.frontmatter.featured,
         timestamp: data.frontmatter.timestamp,
-        filename: data.frontmatter.filename,
+        filename: `/research/${data.frontmatter.filename}`,
       };
     },
   )
@@ -65,7 +66,7 @@ export const projects = (
         liveUrl: data.frontmatter.liveUrl,
         featured: data.frontmatter.featured,
         timestamp: data.frontmatter.timestamp,
-        filename: data.frontmatter.filename,
+        filename: `/projects/${data.frontmatter.filename}`,
       };
     },
   )

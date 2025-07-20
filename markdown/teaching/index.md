@@ -1,0 +1,80 @@
+---
+layout: ../../layouts/TeachingLayout.astro
+title: Teaching
+description: Courses and workshops takes
+tags: ["code", "html"]
+time: 4
+featured: false
+timestamp: 2024-12-18T02:39:03+00:00
+filename: html-teaching
+showTime: false
+---
+
+
+# Teaching Courses and Workshops
+
+## Programming Languages & Compilers
+
+### Principles of Programming Languages (eMasters)
+2009–2024 (15 years) | Monsoon semesters + 2024 Summer
+
+### Compilers (IIITH)
+2023–2024 | Spring semesters
+
+### Software Foundations (IIITH)
+2015–2024 | Spring semesters (5 years)
+
+### Program Verification (IIITH)
+2019–2020 | Spring semesters
+
+### Semantics of Programming Languages (IIITH)
+2013–2014 | Spring semesters
+
+### Topics in Programming Languages (IIITH)
+2012 Spring
+
+### Interpreters and Compilers (IIITM-K)
+2004 Spring
+
+## Algorithms & Data Structures
+
+### Data Structures and Algorithms (IIITM Kerala)
+2009 Spring
+
+### Advanced Problem Solving (IIITH)
+2018 Monsoon
+
+### Computer Problem Solving (IIITH)
+2015 Monsoon
+
+## Web Technologies
+
+### Web Technologies (IIITM-K)
+2003–2008 | Fall semesters (4 years)
+
+### Advanced Web Technologies (IIITM-K)
+2004 Spring
+
+## Database Systems
+
+### Database Systems (IIITM-K, Co-instructor)
+2005–2006 | Spring semesters
+
+## Other Courses
+
+### Programming Application Software (IIIT Bangalore)
+2009 Fall
+
+### IT Workshop 2 (IIITH)
+2010–2017 | Spring semesters (3 years)
+
+### Computational Biology (IIITM-K, Co-instructor)
+2007 Fall
+
+### Scientific Computing (IIITM-K, Co-instructor)
+2006 Fall
+
+### Mathematical Foundations of Information Technology (IIITM-K)
+2004 Winter
+
+##

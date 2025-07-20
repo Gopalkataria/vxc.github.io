@@ -7,7 +7,6 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-    --card-color: oklch(0.25 0 0);
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
     --card: oklch(1 0 0);
@@ -47,7 +46,7 @@
 .dark {
     --background: oklch(0.145 0 0);
     --foreground: oklch(0.985 0 0);
-    --card: oklch(0.2685 0.0114 237.08);
+    --card: oklch(0.145 0 0);
     --card-foreground: oklch(0.985 0 0);
     --popover: oklch(0.145 0 0);
     --popover-foreground: oklch(0.985 0 0);
@@ -230,27 +229,15 @@
             color: var(--color-zag-dark);
         }
     }
-    h1.-zag-text,
-    h2.-zag-text,
-    h3.-zag-text,
-    h4.-zag-text,
-    h5.-zag-text,
-    h6.-zag-text,
-    a.-zag-text {
-        color: #000026;
-    }
 
-    :where(.dark, .dark *) {
-        h1.-zag-text,
-        h2.-zag-text,
-        h3.-zag-text,
-        h4.-zag-text,
-        h5.-zag-text,
-        h6.-zag-text,
-        a.-zag-text {
-            color: var(--color-zag-light);
-        }
+    /* FIXME */
+    /* h1.-zag-text, h2.-zag-text, h3.-zag-text, h4.-zag-text, h5.-zag-text, h6.-zag-text a.-zag-text {
+    color: #000066;
+    :where(.dark, .dark *) & {
+      color: var(--color-zag-light);
     }
+  } */
+
     .zag-muted {
         color: var(--color-zag-dark-muted);
         :where(.dark, .dark *) & {
@@ -286,16 +273,5 @@
 
     .opsz {
         font-variation-settings: "opsz" 72;
-    }
-
-    /* Force bullets/numbers to show */
-    ul.zag-list,
-    ol.zag-list {
-        list-style-type: inherit !important;
-        -webkit-padding-start: 1.5em !important;
-    }
-
-    li.zag-list {
-        display: list-item !important;
     }
 }
